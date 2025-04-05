@@ -1,15 +1,14 @@
-venv/
-    __pycache__/
-    *.pyc
-    *.pyo
-    *.pyd
-    .env
-    node_modules/
-    downloads/
-    *.log
-    .vscode/
-    .idea/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+node_modules/
+downloads/
+*.log
+.vscode/
+.idea/
 
-    # OS generated files
-    .DS_Store
-    Thumbs.db
+# OS generated files
+.DS_Store
+Thumbs.db
