@@ -1,4 +1,5 @@
 # DLX Media Downloader
+![Capture](https://github.com/user-attachments/assets/5068ed5a-fb62-4e49-a9e4-fa085d543315)
 
 A simple web application to download YouTube videos in various formats.
 
