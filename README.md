@@ -1,57 +1,125 @@
 # DLX Media Downloader
+
 ![Capture](https://github.com/user-attachments/assets/5068ed5a-fb62-4e49-a9e4-fa085d543315)
 
-A simple web application to download YouTube videos in various formats.
+## Overview
+
+DLX Media Downloader is a modern, web-based YouTube video and audio downloader built with Flask and a beautiful responsive interface. It allows users to effortlessly download YouTube videos in MP4 format or convert them to high-quality MP3 audio files. With its clean, intuitive design and powerful backend, DLX makes media downloading simple and accessible for everyone.
+
+## Problem It Solves
+
+In today's digital world, users often need to download YouTube content for offline viewing, educational purposes, or audio extraction. However, most existing solutions are either:
+- **Cluttered with ads and pop-ups**
+- **Require software installation**
+- **Have poor user interfaces**
+- **Lack proper error handling**
+- **Don't support both video and audio formats**
+
+DLX Media Downloader solves these problems by providing a clean, ad-free, web-based solution that works directly in your browser with session-based file management, intelligent caching, and rate limiting for optimal performance.
+
+## Tech Stack
+
+### Backend
+- **Python 3.x**: Core programming language
+- **Flask**: Lightweight web framework for the API
+- **yt-dlp**: Robust YouTube video extraction library
+- **moviepy**: Video processing and MP3 conversion
+- **Flask-Limiter**: Rate limiting for API protection
+- **cachelib**: In-memory caching system
+
+### Frontend
+- **HTML5**: Modern semantic markup
+- **Tailwind CSS**: Utility-first CSS framework for responsive design
+- **Vanilla JavaScript**: Clean, dependency-free frontend interactions
+- **CSS Grid & Flexbox**: Modern layout techniques
+
+### Development Tools
+- **Node.js & npm**: For CSS build process
+- **Git**: Version control
+- **dotenv**: Environment variable management
+
+## How to Run
+
+### Prerequisites
+- Python 3.7 or higher
+- Node.js and npm
+- Git
+
+### Installation Steps
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/DLX-Media-Downloader.git
+   cd DLX-Media-Downloader
+   ```
+
+2. **Install Python dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Install Node.js dependencies**:
+   ```bash
+   npm install
+   ```
+
+4. **Build CSS assets**:
+   ```bash
+   npm run build:css
+   ```
+
+5. **Set up environment variables** (optional):
+   ```bash
+   cp .env.example .env
+   # Edit .env with your preferred settings
+   ```
+
+6. **Run the application**:
+   ```bash
+   python app.py
+   ```
+
+7. **Access the application**:
+   Open your browser and navigate to `http://localhost:5000`
+
+### Development Mode
+
+For development with auto-reload:
+```bash
+export FLASK_ENV=development
+python app.py
+```
+
+For CSS development with watch mode:
+```bash
+npm run watch:css
+```
 
 ## Features
 
-* Download YouTube videos as **video** (MP4).
-* Download YouTube videos as **audio** (MP3).
-* Clean and intuitive user interface.
-* Basic input validation.
-* Asynchronous processing for faster downloads.
-* Caching of recent downloads.
-* Rate limiting to prevent abuse.
-* Light and dark theme support.
+- ✨ **Clean, Modern UI** with dark/light theme toggle
+- 🚀 **Fast Downloads** with intelligent caching
+- 🎵 **Dual Format Support** - MP4 video and MP3 audio
+- 🛡️ **Rate Limiting** to prevent abuse
+- 📱 **Responsive Design** works on all devices
+- 🔒 **Session-based Security** with sanitized filenames
+- ⚡ **Asynchronous Processing** for better performance
+- 💾 **Smart Caching** to avoid redundant downloads
 
-## Setup
+## API Endpoints
 
-1.  **Clone the repository:**
-    ```bash
-    git clone <repository_url>
-    cd rohitto95-dlx--media-downloder
-    ```
+- `GET /` - Main application interface
+- `POST /process` - Process download requests
+- `GET /downloads/<filename>` - Serve downloaded files
 
-2.  **Install Python dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
+## License
 
-3.  **Install Node.js dependencies (for CSS):**
-    ```bash
-    npm install
-    ```
-
-4.  **Run the CSS build process (watches for changes):**
-    ```bash
-    npm run build:css
-    ```
-    (Open a separate terminal for this command)
-
-5.  **Run the Flask application:**
-    ```bash
-    python app.py
-    ```
-    The application will be accessible at `http://127.0.0.1:5000/` in your web browser.
-
-## How to Use
-
-1.  Open the application in your web browser.
-2.  Paste the URL of the YouTube video you want to download into the input field.
-3.  Click either the "Download Video" or "Download Audio" button.
-4.  A status message will appear indicating the processing progress.
-5.  Once the download is ready, a download link with the filename will be provided. Click the link to save the file.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit pull requests or open issues for any bugs or feature requests.
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+---
+
+**Built with ❤️ for the community**
